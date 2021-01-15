@@ -10,3 +10,14 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #F0F2F5;
 }
+
+header {
+    text-align: center;
+    padding: 2rem 0 10rem;
+    background-color: #2D4A22;
+}
+
+#logo {
+    color: white;
+    font-weight: 100;
+}
