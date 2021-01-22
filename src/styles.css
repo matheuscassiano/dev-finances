@@ -32,6 +32,21 @@ body {
     margin: 0 auto;
 }
 
+a {
+    color: #49AA26;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+a:hover {
+    color: #3DD705;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
 h2 {
     font-weight: normal;
     color: var(--dark-blue);
