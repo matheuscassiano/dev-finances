@@ -105,12 +105,15 @@ header {
     background: #49AA26;
 }
 
+#transaction {
+    display: block;
+    overflow-x: auto;
+}
+
 #data-table {
     width: 100%;
-    display: block;
     color: #969CB3;
     border-spacing: 0 .5rem;
-    overflow-x: auto;
 }
 
 #data-table th {
