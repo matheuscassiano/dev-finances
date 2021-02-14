@@ -46,14 +46,31 @@ const DOM = {
         DOM.transactionsContainer.appendChild(tr)
     },
     innerHTMLTransaction: ({ description, amount, date }) => {
+        const CSSClass = amount < 0 ? 'expense' : 'income'
+        const formatedAmount = Utils.formatCurrency(amount)
         const html = `
         <td class="description">${description}</td>
-        <td class="${amount < 0 ? 'expense' : 'income'}">R$ ${amount}</td>
+        <td class="${CSSClass}">${formatedAmount}</td>
         <td class="date">${date}</td>
         <td><img src="./src/assets/minus.svg" alt="Remover Transação"></td>
         `
 
         return html
+    }
+}
+
+const Utils = {
+    formatCurrency: (currency) => {
+        const signal = Number(currency) < 0 ? "-" : ""
+        
+        currency = String(currency).replace(/\D/g, '')
+        currency = Number(currency) / 100
+        currency = currency.toLocaleString('pt-BR', { 
+            style: 'currency',
+            currency: 'BRL'
+        })
+
+        return signal + currency
     }
 }
 
